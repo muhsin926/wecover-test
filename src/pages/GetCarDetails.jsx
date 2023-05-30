@@ -1,16 +1,18 @@
-import Header from '../components/Header'
-import { Box } from '@mui/material'
-import Steps from '../components/Steps'
-import SignToCarInsure from '../components/SignToCarInsure'
+import Header from "../components/Header";
+import { Container } from "@mui/material";
+import Steps from "../components/Steps";
+import SignToCarInsure from "../components/SignToCarInsure";
 
 const GetCarDetails = () => {
   return (
-    <Box sx={{padding: 3}} className='backgroundColor' >
-    <Header/>
-    <Steps/>
-    <SignToCarInsure/>
-    </Box>
-  )
-}
+    <main className="backgroundColor">
+    <Container sx={{ padding: 3 }} >
+      <Header />
+      <Steps />
+      <SignToCarInsure />
+    </Container>
+    </main>
+  );
+};
 
-export default GetCarDetails
+export default GetCarDetails;

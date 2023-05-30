@@ -1,19 +1,62 @@
-import { Box, Typography } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
+import { Fingerprint, ArrowForward } from "@mui/icons-material";
+import { InputButton, NextButton, radios } from "./helper";
+import "./style.css";
 
 const SignToCarInsure = () => {
   return (
-    <Box
-      sx={{
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 3,
-      }}
-    >
-        <Typography variant="subtitle1">Save your time by using </Typography>
+    <Box className="outerBox">
+      <Box className="mainBox">
+        <Typography variant="subtitle2">Save your time by using </Typography>
+        <div>
+          <InputButton
+            variant="outlined"
+            startIcon={<Fingerprint />}
+            sx={{
+              padding: "10px 60px",
+              justifyContent: "center",
+              fontWeight: "bold",
+              borderColor: "#000",
+              fontSize: "16px",
+            }}
+          >
+            Sign in with UAE PASS
+          </InputButton>
+        </div>
+
+        <Typography variant="subtitle2" sx={{ color: "rgba(0,0,0,.5)" }}>
+          or you can proceed with{" "}
+        </Typography>
+
+        <FormControl>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue={radios[0].value}
+            name="radio-buttons-group"
+          >
+            {radios.map((data) => (
+              <InputButton key={data.value} variant="outlined">
+                <FormControlLabel
+                  value={data.value}
+                  control={<Radio />}
+                  label={data.label}
+                />
+              </InputButton>
+            ))}
+          </RadioGroup>
+        </FormControl>
+
+        <NextButton variant="outlined" endIcon={<ArrowForward />}>
+          Next
+        </NextButton>
+      </Box>
     </Box>
   );
 };

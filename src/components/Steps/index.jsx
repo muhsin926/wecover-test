@@ -2,21 +2,21 @@ import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
 
 const steps = ["1", "2", "3", "4", "5"];
 const stepValue = 0;
+const style = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: "50px",
+};
+
 const Steps = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "40px",
-      }}
-    >
+    <Box sx={style}>
       <Typography variant="h4" component={"h1"}>
         Let’s get your car insured!
       </Typography>
-      <Box sx={{ width:"80%" }}>
+      <Box sx={{ width: "80%" }}>
         <Stepper
           activeStep={stepValue}
           alternativeLabel

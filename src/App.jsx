@@ -1,8 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GetCarDetails from "./pages/GetCarDetails";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<GetCarDetails />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

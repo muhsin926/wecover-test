@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+ 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +10,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body{
+  margin: 0;
+}
+
+.backgroundColor{
+  background: linear-gradient(
+    101.27deg,
+    rgb(154, 240, 45, 0.12) -1.28%,
+    rgb(71, 207, 225, 0.12) 104.86%
+  );
+  height: 100vh;
+}
 

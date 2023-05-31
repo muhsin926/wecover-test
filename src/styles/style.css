@@ -6,7 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem 7rem;
+    padding: 3rem;
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, .1)
 }
 
 .outerBox{

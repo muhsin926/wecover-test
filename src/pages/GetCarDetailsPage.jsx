@@ -3,16 +3,17 @@ import { Container } from "@mui/material";
 import Steps from "../components/Steps";
 import SignToCarInsure from "../components/SignToCarInsure";
 
-const GetCarDetails = () => {
+
+const title = "Let’s get your car insured!"
+
+const GetCarDetailsPage = () => {
   return (
-    <main className="backgroundColor">
     <Container sx={{ padding: 3 }} >
       <Header />
-      <Steps />
+      <Steps title={title} />
       <SignToCarInsure />
     </Container>
-    </main>
   );
 };
 
-export default GetCarDetails;
+export default GetCarDetailsPage;

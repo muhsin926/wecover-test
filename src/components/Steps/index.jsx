@@ -1,4 +1,5 @@
 import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
 const steps = ["1", "2", "3", "4", "5"];
 const stepValue = 0;
@@ -10,12 +11,13 @@ const style = {
   marginTop: "50px",
 };
 
-const Steps = () => {
+const Steps = ({ title }) => {
   return (
     <Box sx={style}>
       <Typography variant="h4" component={"h1"}>
-        Let’s get your car insured!
+        {title}
       </Typography>
+
       <Box sx={{ width: "80%" }}>
         <Stepper
           activeStep={stepValue}
@@ -31,6 +33,10 @@ const Steps = () => {
       </Box>
     </Box>
   );
+};
+
+Steps.propTypes = {
+  title: PropTypes.string,
 };
 
 export default Steps;

@@ -1,13 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GetCarDetails from "./pages/GetCarDetails";
+import GetCarDetailsPage from "./pages/GetCarDetailsPage";
+import ChassisNumberPage from "./pages/ChassisNumberPage";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<GetCarDetails />} />
-      </Routes>
-    </Router>
+    <main className="backgroundColor">
+      <Router>
+        <Routes>
+          <Route path="/" element={<GetCarDetailsPage />} />
+          <Route path="/chassis-number" element={<ChassisNumberPage />} />
+        </Routes>
+      </Router>
+    </main>
   );
 };
 

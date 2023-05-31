@@ -11,13 +11,14 @@ import { Button } from "@mui/material";
     justifyContent: "start",
   }));
   
-  export const NextButton = styled(Button)(() => ({
-    borderRadius: 100,
-    color: "#000",
-    border: "2px solid #67dc9b",
-    marginTop: 30,
-    padding: "5px 30px",
-  }));
+//   export const NextButton = styled(Button)(() => ({
+//     borderRadius: 100,
+//     color: "#000",
+//     border: "2px solid #67dc9b",
+//     marginTop: 30,
+//     padding: "5px 30px",
+
+//   }));
 
   export const radios = [
     { value: "Chassis_Number", label: "Enter Chassis Number" },

@@ -173,6 +173,7 @@ export const Companies = ({ companies, selected = false }) => {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
+
                   gap: 1,
                 }}
               >
@@ -182,12 +183,12 @@ export const Companies = ({ companies, selected = false }) => {
                 >
                   Applay
                 </CustomButton>
-                <Typography>Compare</Typography>
+                <Typography className="subtitle2">Compare</Typography>
                 <Checkbox />
 
                 <Box sx={{ marginTop: "auto" }}>
                   <Button
-                    sx={{ color: "black" }}
+                    sx={{ color: "black", textTransform: 'capitalize' }}
                     onClick={() => handleToggle(i)}
                   >
                     {expandedItems.includes(i) ? "See Less" : "See More"}

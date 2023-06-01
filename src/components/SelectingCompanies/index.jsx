@@ -43,7 +43,7 @@ export const SelectingCompanies = () => {
                   ),
                 }}
               />
-              <Button sx={{ color: "black" }} startIcon={<Replay />}>
+              <Button sx={{ color: "black", textTransform: 'capitalize' }} startIcon={<Replay />}>
                 Reset Filters
               </Button>
             </Box>

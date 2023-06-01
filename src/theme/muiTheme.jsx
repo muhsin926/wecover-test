@@ -1,8 +1,8 @@
-import { createMuiTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 
-export const theme = createMuiTheme({
+export const theme = createTheme({
     typography: {
-        "fontFamily": `"Roboto", "Helvetica", "Arial", sans-serif`,
+        "fontFamily": `"Inter",  sans-serif`,
         "fontSize": 14,
         "fontWeightLight": 300,
         "fontWeightRegular": 400,

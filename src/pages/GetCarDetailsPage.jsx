@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import { Container } from "@mui/material";
 import Steps from "../components/Steps";
 import SignToCarInsure from "../components/SignToCarInsure";
+import { ChatWithUs } from "../components/ChatWithUs";
 
 const title = "Let’s get your car insured!";
 
@@ -10,5 +11,6 @@ export const GetCarDetailsPage = () => (
     <Header />
     <Steps title={title} />
     <SignToCarInsure />
+    <ChatWithUs/>
   </Container>
 );

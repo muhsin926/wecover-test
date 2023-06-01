@@ -12,6 +12,7 @@ export const CustomButton = styled(Button)(() => ({
   border: "2px solid #67dc9b",
   marginTop: 30,
   padding: "5px 30px",
+  textTransform: 'capitalize'
 }));
 
 export const NextButton = (props) => {

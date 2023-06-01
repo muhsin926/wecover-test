@@ -1,6 +1,7 @@
 import { Box, FormControlLabel, Grid, Switch, Typography } from "@mui/material";
 import tickIcon from "../../assets/Icons/Icon.png";
 import PropTypes from "prop-types";
+import "../../styles/style.css";
 
 export const CompanyInfo = ({ companies }) => {
   return (
@@ -25,13 +26,18 @@ export const CompanyInfo = ({ companies }) => {
                 {company.info.map((data) => (
                   <>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography variant="subtitle2">Company</Typography>
+                      <Typography
+                        className="subtitle2"
+                        variant="subtitle2"
+                      >
+                        Company
+                      </Typography>
                       <Typography variant="body1" sx={{ fontWeight: 600 }}>
                         {data.company}
                       </Typography>
                     </Grid>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography variant="subtitle2">
+                      <Typography className="subtitle2" variant="subtitle2">
                         Insurance Type
                       </Typography>
                       <Typography variant="body1" sx={{ fontWeight: 600 }}>
@@ -39,28 +45,41 @@ export const CompanyInfo = ({ companies }) => {
                       </Typography>
                     </Grid>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography variant="subtitle2">Final Price</Typography>
+                      <Typography className="subtitle2" variant="subtitle2">
+                        Final Price
+                      </Typography>
                       <Typography variant="body1" sx={{ fontWeight: 600 }}>
                         {data.finalPrice}
                       </Typography>
                     </Grid>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography variant="subtitle2">Repair Type</Typography>
+                      <Typography className="subtitle2" variant="subtitle2">
+                        Repair Type
+                      </Typography>
                       <Typography variant="body1">{data.repairType}</Typography>
                     </Grid>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography variant="subtitle2">Car Value</Typography>
+                      <Typography className="subtitle2" variant="subtitle2">
+                        Car Value
+                      </Typography>
                       <Typography variant="body1">{data.carValue}</Typography>
                     </Grid>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography variant="subtitle2">Excess</Typography>
+                      <Typography className="subtitle2" variant="subtitle2">
+                        Excess
+                      </Typography>
                       <Typography variant="body1">{data.excess}</Typography>
                     </Grid>
                   </>
                 ))}
               </Grid>
 
-              <Typography my={2} sx={{ marginTop: 5 }} variant="subtitle2">
+              <Typography
+                my={2}
+                sx={{ marginTop: 5 }}
+                className="subtitle2"
+                variant="subtitle2"
+              >
                 What is Covered
               </Typography>
               <Grid container>
@@ -81,7 +100,12 @@ export const CompanyInfo = ({ companies }) => {
                 ))}
               </Grid>
 
-              <Typography my={2} sx={{ marginTop: 5 }} variant="subtitle2">
+              <Typography
+                my={2}
+                sx={{ marginTop: 5 }}
+                className="subtitle2"
+                variant="subtitle2"
+              >
                 Add-Ons
               </Typography>
               <Grid container rowSpacing={2}>

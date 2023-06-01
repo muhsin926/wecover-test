@@ -15,14 +15,6 @@ import EstimateCarValue from "./EstimateCarValue";
 import { Plans } from "./Plans";
 import { NextButton } from "../../common/NextButon";
 
-const style = {
-  //   display: "flex",
-  //   flexDirection: "column",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  width: "130px",
-};
-
 const ChassisNumber = () => {
   const [DOB, setDOB] = useState();
   return (
@@ -30,7 +22,7 @@ const ChassisNumber = () => {
       <Box className="mainBox">
         <form action="">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6} sx={style}>
+            <Grid item xs={12} md={6} sx={{ width: "130px" }}>
               <Typography variant="body2">
                 My driving license is less than 3 years
               </Typography>
@@ -46,7 +38,6 @@ const ChassisNumber = () => {
                       control={<Radio />}
                       label="Yes"
                     />
-
                     <FormControlLabel
                       value="no"
                       control={<Radio />}
@@ -56,17 +47,17 @@ const ChassisNumber = () => {
                 </RadioGroup>
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={6} sx={style}>
+            <Grid item xs={12} md={6} sx={{ width: "130px" }}>
               <DatePicker
                 label="Date of Birth"
-                renderInput={(params) => <TextField {...params}  fullWidth/>}
+                renderInput={(params) => <TextField {...params} fullWidth />}
                 value={DOB}
                 onChange={(newDate) => {
                   setDOB(newDate);
                 }}
               />
             </Grid>
-            <Grid item xs={12} md={6} sx={style}>
+            <Grid item xs={12} md={6} sx={{ width: "130px" }}>
               <TextField
                 id="outlined-basic"
                 label="Car Chassis No."
@@ -74,7 +65,7 @@ const ChassisNumber = () => {
                 fullWidth
               />
             </Grid>
-            <Grid item xs={12} md={6} sx={style}>
+            <Grid item xs={12} md={6} sx={{ width: "130px" }}>
               <TextField
                 id="outlined-basic"
                 label="Car estimation Value"
@@ -84,9 +75,11 @@ const ChassisNumber = () => {
             </Grid>
           </Grid>
         </form>
-        <EstimateCarValue/>
-        <Plans/>
-        <NextButton params={''}>Check options</NextButton>
+        <EstimateCarValue />
+        <Plans />
+        <NextButton step={1} params={"/selecting-insurence-companies"}>
+          Check options
+        </NextButton>
       </Box>
     </Box>
   );

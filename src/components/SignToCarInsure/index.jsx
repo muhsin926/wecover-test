@@ -8,12 +8,10 @@ import {
 } from "@mui/material";
 import { Fingerprint, ArrowForward } from "@mui/icons-material";
 import { InputButton, radios } from "./helper";
-import "../../styles/style.css";
-import { useNavigate } from "react-router-dom";
 import { NextButton } from "../../common/NextButon";
+import "../../styles/style.css";
 
 const SignToCarInsure = () => {
-  const navigate =useNavigate()
   return (
     <Box className="outerBox">
       <Box className="mainBox">
@@ -55,7 +53,7 @@ const SignToCarInsure = () => {
             ))}
           </RadioGroup>
         </FormControl>
-        <NextButton params={'chassis-number'} icon={<ArrowForward />}>
+        <NextButton params={"chassis-number"} icon={<ArrowForward />}>
           Next
         </NextButton>
       </Box>

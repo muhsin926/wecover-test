@@ -70,7 +70,7 @@ export const Plans = () => {
                   <Typography variant="body2">starting from</Typography>
                   <Box sx={alignCenter}>
                     <Typography variant="body2">AED</Typography>
-                    <Typography variant="subtitle1">{data.amount}</Typography>
+                    <Typography variant="h6">{data.amount}</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={6} sx={center}>

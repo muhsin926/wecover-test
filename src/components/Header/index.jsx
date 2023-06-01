@@ -6,7 +6,7 @@ import {
   hideSmallScreen,
   showSmallScreen,
 } from "./customUI";
-import logo from '../../assets/Logo/logo.svg'
+import logo from "../../assets/Logo/logo.svg";
 
 const Header = () => {
   return (

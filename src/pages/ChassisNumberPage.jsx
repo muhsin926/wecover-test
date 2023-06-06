@@ -7,7 +7,7 @@ import { ChatWithUs } from "../components/ChatWithUs";
 const title = "We want to know about you and your car";
 
 export const ChassisNumberPage = () => (
-  <Container sx={{ padding: 3 }}>
+  <Container >
     <Header />
     <Steps title={title} />
     <ChassisNumber />

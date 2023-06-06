@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { ArrowBack, Replay } from "@mui/icons-material";
 import {
   NavButton,
@@ -7,24 +7,31 @@ import {
   showSmallScreen,
 } from "./customUI";
 import logo from "../../assets/Logo/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate =useNavigate();
+  const handleBackButtonClick = () => {
+    navigate(-1)
+  };
+
   return (
-    <Box
-      component="nav"
+    <Container
+    maxWidth='lg'
       sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        padding: 2
       }}
     >
       <Box sx={hideSmallScreen}>
-        <NavButton startIcon={<ArrowBack />}>Back</NavButton>
+        <NavButton startIcon={<ArrowBack />} onClick={handleBackButtonClick}>Back</NavButton>
       </Box>
 
       <Box sx={showSmallScreen}>
         <SmallNavBtn>
-          <ArrowBack />
+          <ArrowBack onClick={handleBackButtonClick} />
         </SmallNavBtn>
       </Box>
       <Box>
@@ -39,7 +46,7 @@ const Header = () => {
           <Replay />
         </SmallNavBtn>
       </Box>
-    </Box>
+    </Container>
   );
 };
 

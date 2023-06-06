@@ -9,7 +9,7 @@ const style = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  marginTop: "50px",
+ 
 };
 
 const Steps = ({ title }) => {

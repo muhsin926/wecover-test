@@ -8,7 +8,7 @@ export const companies = [
       {
         company: "Al Buhaira National Insurance",
         insuranceType: "Comprehensive - Gold",
-        finalPrice: "AED 1,437 /year",
+        finalPrice: "1,437",
         repairType: "Workshop",
         carValue: "AED 36350",
         excess: "AED 0",
@@ -53,7 +53,7 @@ export const companies = [
       {
         company: "Methaq insurance",
         insuranceType: "Comprehensive - Silver",
-        finalPrice: "AED 1559/year",
+        finalPrice: "1559",
         repairType: "Workshop",
         carValue: "AED 36350",
         excess: "AED 0",

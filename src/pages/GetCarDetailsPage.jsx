@@ -7,10 +7,9 @@ import { ChatWithUs } from "../components/ChatWithUs";
 const title = "Let’s get your car insured!";
 
 export const GetCarDetailsPage = () => (
-  <Container sx={{ padding: 3 }}>
-    <Header />
+    <><Header /><Container sx={{ padding: 3 }}>
     <Steps title={title} />
     <SignToCarInsure />
-    <ChatWithUs/>
-  </Container>
+    <ChatWithUs />
+  </Container></>
 );

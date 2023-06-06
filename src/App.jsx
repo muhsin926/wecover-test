@@ -3,10 +3,12 @@ import { GetCarDetailsPage } from "./pages/GetCarDetailsPage";
 import { ChassisNumberPage } from "./pages/ChassisNumberPage";
 import { SelectingInsCoPage } from "./pages/SelectingInsCoPage";
 import { SelectedCompanyPage } from "./pages/SelectedCompanyPage";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <main className="backgroundColor">
+      <Toaster />
       <Router>
         <Routes>
           <Route path="/" element={<GetCarDetailsPage />} />

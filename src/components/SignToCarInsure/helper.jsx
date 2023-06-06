@@ -9,6 +9,7 @@ export const InputButton = styled(Button)(() => ({
   margin: "10px 0",
   display: "flex",
   justifyContent: "start",
+  textTransform: "capitalize",
 }));
 
 export const radios = [

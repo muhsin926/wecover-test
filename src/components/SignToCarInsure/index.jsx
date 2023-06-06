@@ -10,8 +10,13 @@ import { Fingerprint, ArrowForward } from "@mui/icons-material";
 import { InputButton, radios } from "./helper";
 import { NextButton } from "../../common/NextButon";
 import "../../styles/style.css";
+import { useState } from "react";
 
 const SignToCarInsure = () => {
+  const [value, setValue] = useState();
+  const handleOnchangeValue = (e) => {
+    setValue(e.target.value);
+  };
   return (
     <Box className="outerBox">
       <Box className="mainBox">
@@ -21,11 +26,12 @@ const SignToCarInsure = () => {
             variant="outlined"
             startIcon={<Fingerprint />}
             sx={{
-              padding: "10px 60px",
+              padding: "12px 20px",
               justifyContent: "center",
               fontWeight: "bold",
               borderColor: "#000",
               fontSize: "16px",
+              minWidth: "18rem",
             }}
           >
             Sign in with UAE PASS
@@ -41,6 +47,8 @@ const SignToCarInsure = () => {
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue={radios[0].value}
             name="radio-buttons-group"
+            value={value}
+            onChange={handleOnchangeValue}
           >
             {radios.map((data) => (
               <InputButton key={data.value} variant="outlined">
@@ -53,7 +61,11 @@ const SignToCarInsure = () => {
             ))}
           </RadioGroup>
         </FormControl>
-        <NextButton params={"chassis-number"} icon={<ArrowForward />}>
+        <NextButton
+          radio={value}
+          params={"chassis-number"}
+          icon={<ArrowForward />}
+        >
           Next
         </NextButton>
       </Box>

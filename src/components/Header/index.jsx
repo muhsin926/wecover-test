@@ -10,23 +10,25 @@ import logo from "../../assets/Logo/logo.svg";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const navigate =useNavigate();
+  const navigate = useNavigate();
   const handleBackButtonClick = () => {
-    navigate(-1)
+    navigate(-1);
   };
 
   return (
     <Container
-    maxWidth='lg'
+      maxWidth="lg"
       sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: 2
+        padding: 2,
       }}
     >
       <Box sx={hideSmallScreen}>
-        <NavButton startIcon={<ArrowBack />} onClick={handleBackButtonClick}>Back</NavButton>
+        <NavButton startIcon={<ArrowBack />} onClick={handleBackButtonClick}>
+          Back
+        </NavButton>
       </Box>
 
       <Box sx={showSmallScreen}>

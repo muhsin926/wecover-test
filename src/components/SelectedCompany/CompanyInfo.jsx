@@ -26,10 +26,7 @@ export const CompanyInfo = ({ companies }) => {
                 {company.info.map((data) => (
                   <>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
-                      <Typography
-                        className="subtitle2"
-                        variant="subtitle2"
-                      >
+                      <Typography className="subtitle2" variant="subtitle2">
                         Company
                       </Typography>
                       <Typography variant="body1" sx={{ fontWeight: 600 }}>
@@ -48,17 +45,9 @@ export const CompanyInfo = ({ companies }) => {
                       <Typography className="subtitle2" variant="subtitle2">
                         Final Price
                       </Typography>
-                      <Box sx={{display: 'flex', gap: 1}}>
-                      <Typography variant="body1" >
-                        AED
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontWeight: 600 }} >
+                      <Typography variant="body1" sx={{ fontWeight: 600 }}>
                         {data.finalPrice}
                       </Typography>
-                      <Typography variant="body1" >
-                       /year
-                      </Typography>
-                      </Box>
                     </Grid>
                     <Grid key={data.company} item xs={12} sm={6} md={4}>
                       <Typography className="subtitle2" variant="subtitle2">

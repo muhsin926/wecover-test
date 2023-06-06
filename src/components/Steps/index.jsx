@@ -26,7 +26,7 @@ const Steps = ({ title }) => {
           alternativeLabel
           style={{ paddingBlock: 30 }}
         >
-          {steps.map((label) => (
+          {steps?.map((label) => (
             <Step key={label}>
               <StepLabel></StepLabel>
             </Step>
